@@ -48,6 +48,22 @@ function Invoke-LumenPlugin_inventory_snapshot {
             $osName = $osDesc
             $osVersion = $PSVersionTable.OS
             $lastBoot = $null
+            # Cross-platform memory hints
+            try {
+                if (Test-Path '/usr/sbin/sysctl') {
+                    $memBytes = [int64]((& /usr/sbin/sysctl -n hw.memsize 2>$null))
+                    if ($memBytes -gt 0) {
+                        $memory = [pscustomobject]@{
+                            TotalGB      = [math]::Round($memBytes / 1GB, 2)
+                            FreeGB       = $null
+                            Manufacturer = 'Apple'
+                            Model        = (& /usr/sbin/sysctl -n hw.model 2>$null)
+                            LogicalCPUs  = [int]((& /usr/sbin/sysctl -n hw.logicalcpu 2>$null))
+                        }
+                    }
+                }
+            }
+            catch { }
         }
 
         [pscustomobject]@{

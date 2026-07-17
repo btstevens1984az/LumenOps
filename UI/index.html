@@ -78,9 +78,14 @@
       <aside class="inspector panel">
         <div class="inspector-head">
           <h3>Live Output</h3>
-          <button id="btnClearOut" class="btn tiny ghost" type="button">Clear</button>
+          <div class="inspector-actions">
+            <button id="btnCopyOut" class="btn tiny ghost" type="button">Copy</button>
+            <button id="btnClearOut" class="btn tiny ghost" type="button">Clear</button>
+          </div>
         </div>
-        <pre id="output" class="output"><code>Ready. Pick an action or press ⌘K.</code></pre>
+        <div id="output" class="output-panel" aria-live="polite">
+          <div class="out-empty">Ready. Pick an action or press ⌘K.</div>
+        </div>
       </aside>
     </main>
   </div>

@@ -23,7 +23,7 @@ LazyWinAdmin (2012) proved that PowerShell + a GUI could make day-to-day Windows
 | Sapien WinForms, PS 2.0 | PowerShell 7+, local glass web console |
 | One machine at a time | Fleet pulse + multi-target playbooks |
 | Hard-coded buttons | Discoverable plugins + ⌘K command palette |
-| Text dumps in a RichTextBox | Structured JSON you can export, pipe, automate |
+| Text dumps in a RichTextBox | Human-readable Live Output + structured export |
 | Optional external EXEs | Pure PowerShell plugins the community can ship |
 
 **What’s new for the community (the “never been done quite like this” part):**
@@ -39,9 +39,21 @@ LazyWinAdmin (2012) proved that PowerShell + a GUI could make day-to-day Windows
 
 ## Screenshots
 
-> Run `Start-LumenOps -OpenBrowser` and you’ll see the teal glass console: brand-forward hero, plugin rail, live JSON inspector, and command palette.
+<p align="center">
+  <img src="media/01-console-overview.png" alt="LumenOps glass console overview" width="900" />
+</p>
 
-*(Add your own captures to `/media` after first run — PRs with screenshots are very welcome.)*
+**Human-readable Live Output** — tables, meters, and status badges instead of raw JSON:
+
+<p align="center">
+  <img src="media/02-live-output.png" alt="LumenOps Live Output showing installed software" width="900" />
+</p>
+
+**Command palette** (`⌘K` / `Ctrl+K`) — jump to any admin action instantly:
+
+<p align="center">
+  <img src="media/03-command-palette.png" alt="LumenOps command palette" width="900" />
+</p>
 
 ---
 
