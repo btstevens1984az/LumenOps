@@ -1,0 +1,30 @@
+{
+  "id": "services",
+  "name": "Services",
+  "description": "Query and control Windows services — including auto-start health checks.",
+  "icon": "gears",
+  "category": "System",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "list",
+      "name": "List Services",
+      "description": "List services with status and start type",
+      "keywords": ["service", "svc", "running"]
+    },
+    {
+      "id": "autoHealth",
+      "name": "Auto-Start Health",
+      "description": "Find Automatic services that are not running",
+      "keywords": ["auto", "health", "failed"]
+    },
+    {
+      "id": "control",
+      "name": "Control Service",
+      "description": "Start, stop, or restart a service",
+      "confirm": true,
+      "destructive": true,
+      "keywords": ["start", "stop", "restart"]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Fleet Pulse",
+  "description": "Connectivity probe across multiple targets — edit the targets array for your environment.",
+  "abortOnError": false,
+  "targets": ["localhost"],
+  "steps": [
+    {
+      "name": "Probe",
+      "plugin": "connectivity",
+      "action": "probe"
+    },
+    {
+      "name": "Disk",
+      "plugin": "disk",
+      "action": "usage"
+    }
+  ]
+}

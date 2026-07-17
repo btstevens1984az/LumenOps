@@ -1,0 +1,11 @@
+{
+  "name": "Inventory Export",
+  "description": "Collect full inventory, top processes, network adapters, and installed software.",
+  "abortOnError": false,
+  "steps": [
+    { "name": "Snapshot", "plugin": "inventory", "action": "snapshot" },
+    { "name": "Top processes", "plugin": "processes", "action": "top", "parameters": { "limit": 15 } },
+    { "name": "Network", "plugin": "network", "action": "adapters" },
+    { "name": "Software", "plugin": "software", "action": "installed" }
+  ]
+}

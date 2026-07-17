@@ -1,0 +1,22 @@
+{
+  "id": "connectivity",
+  "name": "Connectivity",
+  "description": "Multi-probe reachability — ICMP, WinRM, RDP, HTTP/S, DNS.",
+  "icon": "radar",
+  "category": "Network",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "probe",
+      "name": "Full Probe",
+      "description": "Run the connectivity matrix against a host",
+      "keywords": ["ping", "rdp", "winrm", "rpc", "probe"]
+    },
+    {
+      "id": "ping",
+      "name": "Ping",
+      "description": "ICMP echo test",
+      "keywords": ["ping", "icmp"]
+    }
+  ]
+}

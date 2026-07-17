@@ -1,0 +1,16 @@
+{
+  "id": "software",
+  "name": "Software",
+  "description": "Installed applications inventory from registry / package managers.",
+  "icon": "box",
+  "category": "Software",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "installed",
+      "name": "Installed Apps",
+      "description": "List installed applications",
+      "keywords": ["apps", "programs", "installed", "msi"]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# Build / local
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Secrets — never commit
+.env
+*.pem
+*.pfx
+*credentials*
+*secret*
+ghp_*
+gho_*
+
+# Local runtime state
+.lumenops/
+state/
+exports/
+*.local.json
+
+# IDE
+.vscode/
+.idea/
+*.swp

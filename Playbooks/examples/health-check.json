@@ -1,0 +1,34 @@
+{
+  "name": "Health Check",
+  "description": "Quick pulse — identity, disk pressure, auto-service health, and connectivity probe.",
+  "abortOnError": false,
+  "targets": ["localhost"],
+  "steps": [
+    {
+      "name": "Host identity",
+      "plugin": "inventory",
+      "action": "identity"
+    },
+    {
+      "name": "Storage pressure",
+      "plugin": "disk",
+      "action": "pressure",
+      "parameters": { "threshold": 15 }
+    },
+    {
+      "name": "Automatic services health",
+      "plugin": "services",
+      "action": "autoHealth"
+    },
+    {
+      "name": "Connectivity probe",
+      "plugin": "connectivity",
+      "action": "probe"
+    },
+    {
+      "name": "Security pulse",
+      "plugin": "security",
+      "action": "pulse"
+    }
+  ]
+}

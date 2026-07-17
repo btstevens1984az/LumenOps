@@ -1,0 +1,16 @@
+{
+  "id": "sessions",
+  "name": "Sessions",
+  "description": "Interactive / RDP sessions and signed-in users.",
+  "icon": "users",
+  "category": "Identity",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "users",
+      "name": "Signed-In Users",
+      "description": "Show interactive sessions",
+      "keywords": ["quser", "rdp", "session", "logged in"]
+    }
+  ]
+}

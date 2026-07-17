@@ -1,0 +1,22 @@
+{
+  "id": "processes",
+  "name": "Processes",
+  "description": "Inspect running processes, memory hogs, and command lines.",
+  "icon": "activity",
+  "category": "System",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "top",
+      "name": "Top Consumers",
+      "description": "Top processes by working set",
+      "keywords": ["cpu", "memory", "top", "process"]
+    },
+    {
+      "id": "list",
+      "name": "List Processes",
+      "description": "List processes with PID and path",
+      "keywords": ["process", "tasklist", "pid"]
+    }
+  ]
+}

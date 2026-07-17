@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Import module and discover plugins
+        shell: pwsh
+        run: |
+          Import-Module ./LumenOps.psd1 -Force
+          $plugins = @(Get-LumenOpsPlugin)
+          if ($plugins.Count -lt 1) { throw 'No plugins discovered' }
+          $actions = @(Get-LumenOpsAction)
+          Write-Host "Plugins: $($plugins.Count)  Actions: $($actions.Count)"
+          $plugins | Format-Table Id, Name, Category -AutoSize
+          if ($actions.Count -lt 1) { throw 'No actions discovered' }

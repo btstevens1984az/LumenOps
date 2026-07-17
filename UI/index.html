@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LumenOps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/app.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%232dd4bf'/><stop offset='1' stop-color='%230ea5e9'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='%230b1220'/><circle cx='32' cy='32' r='16' fill='none' stroke='url(%23g)' stroke-width='4'/><circle cx='32' cy='32' r='6' fill='%232dd4bf'/></svg>" />
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="grid-overlay" aria-hidden="true"></div>
+
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <span class="orb"></span>
+        </div>
+        <div class="brand-text">
+          <h1>LumenOps</h1>
+          <p>PowerShell Admin Console</p>
+        </div>
+      </div>
+
+      <div class="target-bar">
+        <label for="targetInput">Target</label>
+        <input id="targetInput" type="text" value="localhost" spellcheck="false" autocomplete="off" placeholder="hostname or IP" />
+        <button id="btnPulse" class="btn ghost" type="button" title="Fleet pulse">Pulse</button>
+      </div>
+
+      <div class="top-actions">
+        <button id="btnPalette" class="btn ghost" type="button"><kbd>⌘</kbd><kbd>K</kbd> Command</button>
+        <div id="healthPill" class="pill pending">connecting…</div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <aside class="rail">
+        <nav id="pluginNav" class="plugin-nav"></nav>
+        <div class="rail-footer">
+          <button id="btnPlaybooks" class="nav-item" type="button" data-view="playbooks">
+            <span class="nav-icon">▸</span>
+            <span>Playbooks</span>
+          </button>
+          <button id="btnActivity" class="nav-item" type="button" data-view="activity">
+            <span class="nav-icon">◉</span>
+            <span>Activity</span>
+          </button>
+        </div>
+      </aside>
+
+      <section class="stage">
+        <div id="hero" class="hero panel">
+          <div class="hero-copy">
+            <p class="eyebrow">Spiritual successor to LazyWinAdmin</p>
+            <h2>See your fleet clearly.</h2>
+            <p class="lede">A remoting-native PowerShell console with a glass UI, command palette, community plugins, and shareable playbooks — built for people who live in terminals but deserve a beautiful control plane.</p>
+            <div class="hero-cta">
+              <button id="btnQuickHealth" class="btn primary" type="button">Run Health Check</button>
+              <button id="btnQuickInventory" class="btn ghost" type="button">Full Inventory</button>
+            </div>
+          </div>
+          <div class="hero-viz" aria-hidden="true">
+            <div class="ring ring-a"></div>
+            <div class="ring ring-b"></div>
+            <div class="ring ring-c"></div>
+            <div class="core"></div>
+          </div>
+        </div>
+
+        <div id="view" class="view"></div>
+      </section>
+
+      <aside class="inspector panel">
+        <div class="inspector-head">
+          <h3>Live Output</h3>
+          <button id="btnClearOut" class="btn tiny ghost" type="button">Clear</button>
+        </div>
+        <pre id="output" class="output"><code>Ready. Pick an action or press ⌘K.</code></pre>
+      </aside>
+    </main>
+  </div>
+
+  <div id="palette" class="palette hidden" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="palette-card">
+      <input id="paletteInput" type="text" placeholder="Search actions, plugins, playbooks…" autocomplete="off" />
+      <ul id="paletteList"></ul>
+      <div class="palette-hint">↑↓ navigate · Enter run · Esc close</div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="/js/app.js"></script>
+</body>
+</html>

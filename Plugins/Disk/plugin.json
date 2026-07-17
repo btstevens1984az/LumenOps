@@ -1,0 +1,22 @@
+{
+  "id": "disk",
+  "name": "Disk & Storage",
+  "description": "Volume capacity, free space, and storage pressure alerts.",
+  "icon": "harddrive",
+  "category": "Storage",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "usage",
+      "name": "Disk Usage",
+      "description": "Show free/used space per volume",
+      "keywords": ["disk", "space", "volume", "drive"]
+    },
+    {
+      "id": "pressure",
+      "name": "Storage Pressure",
+      "description": "Flag volumes under 15% free",
+      "keywords": ["low", "space", "alert"]
+    }
+  ]
+}

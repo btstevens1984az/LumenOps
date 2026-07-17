@@ -1,0 +1,22 @@
+{
+  "id": "network",
+  "name": "Network",
+  "description": "Adapters, addresses, routes, and listener ports.",
+  "icon": "network",
+  "category": "Network",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "adapters",
+      "name": "IP Configuration",
+      "description": "List network adapters and addresses",
+      "keywords": ["ipconfig", "ip", "adapter", "dns"]
+    },
+    {
+      "id": "listeners",
+      "name": "Listening Ports",
+      "description": "Show TCP listeners",
+      "keywords": ["port", "listen", "netstat", "tcp"]
+    }
+  ]
+}

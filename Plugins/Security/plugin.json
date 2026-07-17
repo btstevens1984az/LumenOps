@@ -1,0 +1,22 @@
+{
+  "id": "security",
+  "name": "Security Pulse",
+  "description": "Quick hardening signals — admin group, firewall hints, and local security posture.",
+  "icon": "shield",
+  "category": "Security",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "pulse",
+      "name": "Security Pulse",
+      "description": "One-glance security posture checks",
+      "keywords": ["security", "firewall", "admin", "hardening"]
+    },
+    {
+      "id": "password",
+      "name": "Generate Password",
+      "description": "Create a strong random password (local, never logged)",
+      "keywords": ["password", "generate", "secret"]
+    }
+  ]
+}

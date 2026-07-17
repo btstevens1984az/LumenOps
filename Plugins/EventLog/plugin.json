@@ -1,0 +1,16 @@
+{
+  "id": "eventlog",
+  "name": "Event Log",
+  "description": "Recent errors and warnings from the system event stream.",
+  "icon": "scroll",
+  "category": "Diagnostics",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "errors",
+      "name": "Recent Errors",
+      "description": "Last error/warning events",
+      "keywords": ["event", "error", "log", "warning"]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "inventory",
+  "name": "Inventory",
+  "description": "Deep system snapshot — OS, hardware, identity, and runtime facts as structured data.",
+  "icon": "cpu",
+  "category": "System",
+  "version": "1.0.0",
+  "actions": [
+    {
+      "id": "snapshot",
+      "name": "Full Snapshot",
+      "description": "Capture a complete inventory snapshot",
+      "icon": "camera",
+      "keywords": ["inventory", "systeminfo", "hw", "os"]
+    },
+    {
+      "id": "identity",
+      "name": "Host Identity",
+      "description": "Hostname, domain, user, and timezone",
+      "icon": "id",
+      "keywords": ["hostname", "domain", "whoami"]
+    }
+  ]
+}
